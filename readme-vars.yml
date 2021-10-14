@@ -46,4 +46,5 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "14.10.21:", desc: "Use standard nginx.conf from lsio alpine nginx base image." }
   - { date: "06.06.2021:", desc: "Initial Release." }
