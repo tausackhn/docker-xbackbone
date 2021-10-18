@@ -8,9 +8,6 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="gilbn"
 
 RUN \
-  echo "**** install build packages ****" && \
-    apk add --no-cache --virtual=build-dependencies \
-    composer && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     curl \
@@ -38,8 +35,6 @@ RUN \
     "https://github.com/SergiX44/XBackBone/releases/download/${XBACKBONE_RELEASE}/release-v${XBACKBONE_RELEASE}.zip" && \
   unzip -q -o /tmp/xbackbone.zip -d /app/xbackbone/ && \
   echo "**** cleanup ****" && \
-  apk del --purge \
-    build-dependencies && \
   rm -rf \
     /root/.cache \
     /tmp/*
