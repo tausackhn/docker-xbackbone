@@ -11,19 +11,19 @@ RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     curl \
-    php7 \
-    php7-sqlite3 \
-    php7-mysqli \
-    php7-pdo_mysql \
-    php7-pdo_sqlite \
-    php7-gd \
-    php7-json \
-    php7-fileinfo \
-    php7-zip \
-    php7-ftp \
-    php7-ldap \
-    php7-tokenizer \
-    php7-intl && \
+    php8 \
+    php8-sqlite3 \
+    php8-mysqli \
+    php8-pdo_mysql \
+    php8-pdo_sqlite \
+    php8-gd \
+    php8-json \
+    php8-fileinfo \
+    php8-zip \
+    php8-ftp \
+    php8-ldap \
+    php8-tokenizer \
+    php8-intl && \
   echo "**** install xbackbone ****" && \
     mkdir -p /app/xbackbone && \
   if [ -z ${XBACKBONE_RELEASE+x} ]; then \
